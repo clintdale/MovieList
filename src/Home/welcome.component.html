@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">{{pageTitle}}</h1>
+      <p class="lead">Using Angular FrameWork</p>
+    </div>
+  </div>
+</div>
+<div class="container">
+
+  <div class="row rows-cols-2">
+    <div *ngFor="let aMovie of movie" class="card mb-3" style="width: 540px; margin-left: 20px;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img [src]="(imgUrl + aMovie.poster_path)" style=" width: 100%; height: 15vw; object-fit: cover;"
+            class="card-img embed-responsive-item" alt="{{movie.title}}">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{aMovie.original_title}}</h5>
+            <p class="card-text" style="font-size: .8em;">{{aMovie.overview}}</p>
+            <p class="card-text"><small class="text-muted"><span>Release Date: </span>{{aMovie.release_date}}</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngFor="let aTvShow of tvShow" class="card mb-3" style="width: 540px; margin-left: 20px;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img [src]="(imgUrl + aTvShow.poster_path)" style=" width: 100%; height: 15vw; object-fit: cover;"
+            class="card-img embed-responsive-item" alt="{{aTvShow.title}}">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{aTvShow.original_name}}</h5>
+            <p class="card-text" style="font-size: .7em;">{{aTvShow.overview}}</p>
+            <p class="card-text"><small class="text-muted"><span>Release Date: </span>{{aTvShow.first_air_date}}</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

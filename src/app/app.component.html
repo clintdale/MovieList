@@ -1,0 +1,43 @@
+<div class="hello">
+
+  <div class="container text-center">
+      <h1 class="display-4">
+          Welcome to my {{title}}
+        </h1>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+    <a [routerLink] = "['/welcome']" class="navbar-brand" href="#">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item">
+          <a [routerLink] = "['/movies']" class="nav-link" href="#">Movies</a>
+        </li>
+        
+        <li class="nav-item">
+            <a [routerLink] = "['/tvshows']" class="nav-link" href="#">TV Shows</a>
+          </li>
+
+
+      </ul>
+
+    </div>
+  </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+
+
+  <!-- <mv-list></mv-list> -->
+</div>
+
+<footer class="bg-light">
+  <div class="container">
+    <h1 class="text-center" style="font-size: .8em;">Developed by Clint Dale Tagabucba</h1>
+  </div>
+</footer>
